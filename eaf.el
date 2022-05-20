@@ -1495,10 +1495,10 @@ So multiple EAF buffers visiting the same file do not sync with each other."
   (format "%s" (frame-parameter nil 'background-mode)))
 
 (defun eaf-get-theme-background-color ()
-  (format "%s" (frame-parameter nil 'background-color)))
+  (eaf-color-name-to-hex (format "%s" (frame-parameter nil 'background-color))))
 
 (defun eaf-get-theme-foreground-color ()
-  (format "%s" (frame-parameter nil 'foreground-color)))
+  (eaf-color-name-to-hex (format "%s" (frame-parameter nil 'foreground-color))))
 
 (defun eaf--get-current-desktop-name ()
   "Get current desktop name by `wmctrl'."
